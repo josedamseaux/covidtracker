@@ -1,0 +1,108 @@
+
+select {
+    width: 70%;
+}
+
+.nav a{
+    color:white !important;
+}
+
+.title{
+    font-style: italic;
+}
+
+.subtitle {
+    font-style: italic;
+
+}
+
+.card {
+    width: 20%;
+     height: 150px;
+     font-style: italic;
+    font-size: 25px;
+    margin: 5px;
+}
+
+
+.cases h3{
+    font-size: 30px;
+}
+
+.cases {
+    display:flex;
+    justify-content: flex-start;
+}
+
+
+.piechart, .columnChart {
+    margin:0px !important;
+    padding:0px !important;
+}
+
+.columnChart{ 
+    justify-content: center;
+}
+
+@media only screen and (max-width: 600px){
+    .firstContainer{
+        padding:0;
+    }
+    .title{
+        font-size: 250%;
+    }
+
+    label {
+        font-size:12px;
+    }
+    .nav a {
+        padding: 6px !important;
+        font-size: 13px;
+        margin-left: 10px;
+
+    }
+    .nav {
+        height: 40px;
+    }
+    .form-control {
+
+        width: 100%;
+    }
+    .card {
+        width: 36% !important;
+        height: 80px;
+        margin: 5px;
+    }
+    .card-header {
+        font-size:55%;
+        padding:5px;
+        font-style: italic;
+
+    }
+    .card-body {
+        padding:1px;
+        
+    }
+    .cases h3{
+        font-size: 100%;
+        margin-left: 0px;
+    }
+    .subtitle{
+        font-size: 200%;
+        margin-top: 2px !important;
+    }
+    .summaryCases h3{
+        font-size: 130%;
+
+    }
+    
+
+}
+
+
+@media (max-width: 1000px) {
+    h1 {
+        font-size: 50px;
+    }
+    
+  }

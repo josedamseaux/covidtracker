@@ -1,0 +1,69 @@
+<div class="container mt-5" role="alert">
+  <div class="container firstContainer">
+      <h1 class="title">CORONAVIRUS COUNTER</h1>
+      <label for="">Select a country to display current status ({{date}})</label>
+          <select (change)="getCountry($event.target.value)" (change)="getCoronaData()" class="form-control mb-3 mt-1" >
+              <option value="{{ country.Slug  }}" *ngFor="let country of countries">
+                  {{ country.Country  }}
+              </option>
+          </select>
+
+      <div class="cases text-center mt-2">
+          <div class="card bg-white mb-3" >
+              <div class="card-header">Confirmed  </div>
+              <div class="card-body">
+                <h5 class="card-title">{{ confirmed | number:'1.0' }}</h5>
+              </div>
+            </div>
+            <div class="card bg-white mb-3">
+              <div class="card-header">Recovered  </div>
+              <div class="card-body">
+                <h5 class="card-title">{{ recovered | number:'1.0' }} </h5>
+              </div>
+            </div>
+            <div class="card bg-white mb-3">
+              <div class="card-header">Deaths </div>
+              <div class="card-body">
+                <h5 class="card-title">{{ deaths | number:'1.0'}}</h5>
+              </div>
+            </div>
+          <hr>
+      </div>
+      <hr>
+      
+  </div>
+
+
+<div class="container">
+<div class="row">
+  <div class="col-md-4">
+          <h1 class="subtitle mb-3">Global summary</h1>
+          <div class="container ml-2 summaryCases" style="font-style: italic;">
+              <h3> New cases:       <br>  {{ newConfirmed    | number:'1.0' }} </h3>
+              <h3> New deaths:      <br>  {{ newDeaths       | number:'1.0' }} </h3>
+              <h3> New recovered:   <br>  {{ newRecovered    | number:'1.0' }} </h3>
+              <hr>
+              <h3> Total confirmed: <br>  {{ totalConfirmed  | number:'1.0' }} </h3>
+              <h3> Total deaths:    <br>  {{ totalDeaths     | number:'1.0' }} </h3>
+              <h3> Total recovered: <br>  {{ totalRecovered  | number:'1.0' }} </h3>
+          </div>
+  </div>
+
+    <div class="col-md-8 mt-5">
+      <canvas baseChart
+        [data]="doughnutChartData"
+        [labels]="doughnutChartLabels"
+        [chartType]="doughnutChartType"
+        [colors]="doughnutChartColors">
+      </canvas>
+    </div>
+
+  </div>
+
+</div>
+
+
+  <br>
+  <br>
+  <br>
+</div>
